@@ -4,21 +4,17 @@ import {
   Container,
   Heading,
   Box,
-  SimpleGrid,
   Button,
   List,
   ListItem,
   useColorModeValue
 } from '@chakra-ui/react'
-import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoLinkedin, IoLogoRss } from 'react-icons/io5'
 import Image from 'next/image'
 
 const Home = () => (
@@ -71,30 +67,30 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work
+          Description
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <Link as={NextLink} href="/works/inkdrop" passHref scroll={false}>
-            Inkdrop
-          </Link>
-          . He publishes content for marketing his products and his YouTube
-          channel called &quot;
+          Alan Guerra is a systems programmer, software engineer, and content
+          creator from Brazil, specializing in back-end web development and
+          mobile development. Passionate about technology, he focuses on
+          building efficient solutions, from planning to implementation, always
+          aiming to solve real-world problems with code. In addition to being a
+          developer, he is also an IT instructor and continuously expands his
+          knowledge in DevOps and microservices. When not coding, he enjoys
+          exploring new technologies and sharing knowledge. He creates content
+          to share his expertise and promote his projects, including his YouTube
+          channel{' '}
           <Link
             as={NextLink}
-            href="https://www.youtube.com/devaslife"
+            href="https://www.youtube.com/@alsgy2001"
             passHref
             target="_blank"
           >
-            Dev as Life
+            Engenheiro de Software Alan Guerra
           </Link>
-          &quot; has more than 100k subscribers.
+          .
         </Paragraph>
+
         <Box align="center" my={4}>
           <Button
             as={NextLink}
@@ -103,7 +99,7 @@ const Home = () => (
             rightIcon={<ChevronRightIcon />}
             colorScheme="teal"
           >
-            My portfolio
+            My Projects
           </Button>
         </Box>
       </Section>
@@ -113,22 +109,37 @@ const Home = () => (
           Bio
         </Heading>
         <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
+          <BioYear>2001</BioYear>
+          Born in Salvador, Bahia, Brazil.
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&apos;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
+          <BioYear>2017</BioYear>
+          Started studying Java and HTML.
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
+          <BioYear>2019</BioYear>
+          Began a degree in Analysis and Systems Development.
         </BioSection>
         <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Working as a freelancer
+          <BioYear>2020</BioYear>
+          Interned at Market Profile Brasil.
+        </BioSection>
+        <BioSection>
+          <BioYear>2021</BioYear>
+          Junior Software Engineer at Asa Administrador de Sistemas
+          Aeroportuários.
+        </BioSection>
+        <BioSection>
+          <BioYear>2022</BioYear>
+          Started a degree in Computer Science.
+        </BioSection>
+        <BioSection>
+          <BioYear>2023</BioYear>
+          Mid-level Backend Software Engineer at SoftSnov.
+        </BioSection>
+        <BioSection>
+          <BioYear>2024</BioYear>
+          Mid-level Backend Software Engineer at ISpeak.
         </BioSection>
       </Section>
 
@@ -137,15 +148,20 @@ const Home = () => (
           I ♥
         </Heading>
         <Paragraph>
-          Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
-            Drawing
+          Watching anime and classic movies (Terminator, Star Wars, Back to the
+          Future, Blade), Reading ebooks and manga, Playing{' '}
+          <Link href="https://www.minecraft.net/" target="_blank">
+            Minecraft
           </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
+          ,
+          <Link href="https://bloodstrike.com/" target="_blank">
+            Blood Strike
           </Link>
-          , Leica, Machine Learning
+          , and
+          <Link href="https://www.projectzomboid.com/" target="_blank">
+            Project Zomboid
+          </Link>
+          .
         </Paragraph>
       </Section>
 
@@ -155,85 +171,68 @@ const Home = () => (
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
+            <Link href="https://github.com/alsgy2001" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoGithub />}
               >
-                @craftzdog
+                @alsgy2001
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
+            <Link href="https://twitter.com/alsgy2001" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoTwitter />}
               >
-                @inkdrop_app (English)
+                @alsgy2001
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
+            <Link href="https://instagram.com/esalanguerra" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoInstagram />}
               >
-                @craftzdog
+                @esalanguerra
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://www.linkedin.com/in/alsgy2001" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<IoLogoLinkedin />}
+              >
+                @alsgy2001
               </Button>
             </Link>
           </ListItem>
         </List>
 
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
-            thumbnail={thumbYouTube}
-          >
-            My YouTube channel (&gt;200k subs)
-          </GridItem>
-          <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbInkdrop}
-          >
-            A Markdown note-taking app
-          </GridItem>
-        </SimpleGrid>
-
         <Heading as="h3" variant="section-title">
-          Newsletter
+          TabNews
         </Heading>
         <p>
-          Join me on a behind-the-scenes coding journey. Weekly updates on
-          projects, tutorials, and videos
+          Check out my posts and insights on TabNews, where I share content
+          about programming, development, and technology.
         </p>
 
         <Box align="center" my={4}>
           <Button
             as={NextLink}
-            href="https://www.devas.life/"
+            href="https://www.tabnews.com.br/esalanguerra"
             scroll={false}
-            leftIcon={<EmailIcon />}
+            leftIcon={<IoLogoRss />}
             colorScheme="teal"
           >
-            Sign up my newsletter here
+            Visit my TabNews profile
           </Button>
         </Box>
       </Section>
